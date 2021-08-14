@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:padding="14dp"
+    android:background="@drawable/white_background"
+    tools:context=".ControlActivity"
+    android:baselineAligned="false">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_weight=".45"
+        android:layout_height="match_parent">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/t1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="330dp"
+                android:text="@string/aileron"
+                android:textColor="@android:color/black"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toTopOf="@+id/joystick"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/joystick"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/t2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="31dp"
+                android:layout_marginEnd="90dp"
+                android:layout_marginBottom="320dp"
+                android:rotation="270"
+                android:text="@string/throttle"
+                android:textColor="@android:color/black"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/t3"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/joystick" />
+
+            <TextView
+                android:id="@+id/t3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginBottom="5dp"
+                android:text="@string/rudder"
+                android:textColor="@android:color/black"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/joystick"
+                app:layout_constraintStart_toEndOf="@+id/joystick"
+                app:layout_constraintTop_toBottomOf="@+id/rudderSeek" />
+
+            <TextView
+                android:id="@+id/t4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="290dp"
+                android:layout_marginBottom="300dp"
+                android:rotation="90"
+                android:text="@string/elevator"
+                android:textColor="@android:color/black"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/joystick" />
+
+            <SeekBar
+                android:id="@+id/throttleSeek"
+                android:layout_width="250sp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="104dp"
+                android:layout_marginEnd="290dp"
+                android:layout_marginBottom="410dp"
+                android:max="10"
+                android:rotation="270"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/joystick"
+
+                />
+
+            <SeekBar
+                android:id="@+id/rudderSeek"
+                android:layout_width="250sp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="68dp"
+                android:layout_marginEnd="69dp"
+                app:layout_constraintBottom_toTopOf="@+id/t3"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/joystick"
+                android:max="10"/>
+
+            <io.github.controlwear.virtual.joystick.android.JoystickView
+                android:id="@+id/joystick"
+                android:layout_width="300dp"
+                android:layout_height="222dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="90dp"
+                android:layout_marginBottom="10dp"
+                app:JV_backgroundColor="#00968a"
+                app:JV_borderColor="@android:color/black"
+                app:JV_borderWidth="4dp"
+                app:JV_buttonColor="@android:color/black"
+                app:JV_buttonSizeRatio="15%"
+                app:JV_fixedCenter="false"
+                app:layout_constraintBottom_toBottomOf="@+id/rudderSeek"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/t2"
+                app:layout_constraintTop_toBottomOf="@+id/t1" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight=".55">
+        <ImageView
+            android:id="@+id/simulatorImg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:padding="5dp"
+            android:background="@drawable/imageview_border"
+            android:contentDescription="@string/screenshot" />
+
+    </RelativeLayout>
+
+
+
+</LinearLayout>

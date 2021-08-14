@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
+    <color name="greenToast">#78C257</color>
+    <color name="lightGreen">#B9D7AC</color>
+    <color name="lightRed">#ff4c4c</color>
+    <color name="redToast">#d10000</color>
+    <color name="yellowToast">#edf562</color>
+    <color name="yellow_border">#bfc904</color>
+</resources>
